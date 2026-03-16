@@ -66,7 +66,7 @@ public class CardboardStartup : MonoBehaviour
         {
             Api.ReloadDeviceParams();
         }
-#if !UNITY_EDITOR // Se mete con los parametros de unity, si es diferente al editor, se actualizan los parametros de la pantalla.
+#if !UNITY_EDITOR 
         Api.UpdateScreenParams();
 #endif
     }
