@@ -55,7 +55,7 @@ public class CameraPointerManager : MonoBehaviour
                 
                 _gazedAtObject?.SendMessage("OnPointerExitXR",  null, SendMessageOptions.DontRequireReceiver); // Envía el mensaje de salida al objeto anterior
                 _gazedAtObject = hit.transform.gameObject;
-                _gazedAtObject.SendMessage("OnPointerEnterXR", null, SendMessageOptions.DontRequireReceiver);
+                _gazedAtObject.SendMessage("OnPointerEnterXR", null, SendMessageOptions.DontRequireReceiver); // Envía el mensaje de entrada al nuevo objeto interactivo
                 GazeManager.Instance.StartGazeSelection(); // Inicia la selección por mirada para el nuevo objeto interactivo
             }
 
